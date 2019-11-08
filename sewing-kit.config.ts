@@ -30,9 +30,13 @@ module.exports = function sewingKitConfig(plugins: Plugins) {
         'react-router-dom',
       ]),
       plugins.webpack((config) => {
-        config.plugins.push(
-          new BundleAnalyzerPlugin({token: process.env.BUNDLE_ANALYZER_TOKEN}),
-        );
+        if (process.env.TRAVIS) {
+          config.plugins.push(
+            new BundleAnalyzerPlugin({
+              token: process.env.BUNDLE_ANALYZER_TOKEN,
+            }),
+          );
+        }
 
         return config;
       }),
