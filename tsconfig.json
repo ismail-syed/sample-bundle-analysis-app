@@ -1,0 +1,21 @@
+{
+  "extends": "@shopify/typescript-configs/application.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "paths": {
+      "*": ["*", "packages/*", "app/*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "./config/server.ts",
+    "sewing-kit.config.ts",
+    "./app/**/*",
+    "./packages/**/*",
+    "./client/**/*",
+    "./server/**/*",
+    "./server.ts",
+    "./tests/**/*"
+  ]
+}

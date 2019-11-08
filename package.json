@@ -1,0 +1,35 @@
+{
+  "name": "sample-bundle-analysis-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ismail-syed/sample-bundle-analysis-app.git",
+  "author": "Ismail Syed <isyed867@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "sewing-kit dev",
+    "lint": "sewing-kit lint",
+    "type-check": "sewing-kit type-check",
+    "format": "sewing-kit format",
+    "build": "sewing-kit build"
+  },
+  "dependencies": {
+    "@shopify/polaris": "^4.7.3",
+    "@shopify/react-async": "^3.1.2",
+    "@shopify/react-i18n-universal-provider": "^1.0.23",
+    "@shopify/react-performance": "^1.2.1",
+    "@shopify/react-router": "^0.0.16",
+    "@shopify/react-server": "^0.8.2",
+    "@shopify/sewing-kit": "^0.112.0",
+    "@shopify/sewing-kit-koa": "^6.1.5",
+    "koa": "^2.11.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-router": "^5.1.2",
+    "@types/react-router-dom": "^5.1.2",
+    "typescript": "^3.7.2"
+  }
+}
