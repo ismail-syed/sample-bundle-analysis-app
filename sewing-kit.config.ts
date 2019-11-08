@@ -3,6 +3,9 @@ import * as dotenv from 'dotenv';
 import {Plugins} from '@shopify/sewing-kit';
 import {ip, port} from './config/server';
 
+// @ts-ignore
+import BundleAnalyzerPlugin from '@bundle-analyzer/webpack-plugin';
+
 dotenv.config();
 
 module.exports = function sewingKitConfig(plugins: Plugins) {
@@ -26,6 +29,13 @@ module.exports = function sewingKitConfig(plugins: Plugins) {
         'react-router',
         'react-router-dom',
       ]),
+      plugins.webpack((config) => {
+        config.plugins.push(
+          new BundleAnalyzerPlugin({token: process.env.BUNDLE_ANALYZER_TOKEN}),
+        );
+
+        return config;
+      }),
     ],
   };
 };
